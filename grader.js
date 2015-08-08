@@ -22,9 +22,33 @@ exports.averageScore = function(testScores){
 };
 
 exports.medianScore = function(testScores){
+  if (testScores.length % 2 != 0){
+    return (testScores[Math.floor(testScores.length / 2)]) 
+  } else {
+    return (testScores[Math.floor(testScores.length / 2)-1] + testScores[Math.floor(testScores.length / 2)])/2
+  }
+};
 
-  return testScores[Math.floor(testScores.length / 2)];
+exports.modeScore = function(testScores){
 
-  
+  var numTracker = {};
+  var mostOften = 0;
+  var mode;
+
+  testScores.forEach(function findMode(number){
+     
+    numTracker[number] = (numTracker[number] || 0)+1;
+    if (mostOften < numTracker[number]){
+      mostOften = numTracker[number];
+       mode = number;
+    }
+  });
+     return +mode;
 }
+ 
+// http://codereview.stackexchange.com/questions/68315/finding-the-mode-of-an-array
+
+
+
+
 

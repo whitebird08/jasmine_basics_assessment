@@ -34,14 +34,14 @@ describe("medianScore", function(){
     expect(code.medianScore([52,80,80,86,94])).toEqual(80);
   });
 
-  xit("If there are an even number of scores, calculate the average of the middle two scores.", function(){
+  it("If there are an even number of scores, calculate the average of the middle two scores.", function(){
     expect(code.medianScore([40,50,60,70,80,90])).toEqual(65);
   });
 });
 
 describe("modeScore", function(){
  var testScores = [82, 92, 75, 91, 92, 89, 95, 100, 86]
-  xit("takes an array of test scores and calculates the mode score", function(){
+  it("takes an array of test scores and calculates the mode score", function(){
     expect(code.modeScore(testScores)).toEqual(92);
   });
 });

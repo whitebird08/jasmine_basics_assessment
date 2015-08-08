@@ -30,7 +30,8 @@ averageScore([90, 95, 87, 60]);
 
 ###Median
 
-Write a function `medianScore` which takes an array of test scores and calculates the median score.  The median is the middle value.  If there are an even number of scores, calculate the average of the middle two scores.
+Write a function `medianScore` which takes an array of test scores and calculates the median score.  The median is the middle value.  
+
 
 ```
 medianScore([52,80,80,86,94])
